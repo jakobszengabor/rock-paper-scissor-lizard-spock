@@ -55,7 +55,7 @@ scissor.addEventListener("click", () => {
   userChoiceAddHTML(scissorImg);
 });
 lizard.addEventListener("click", () => {
-  userChoice = "spock";
+  userChoice = "lizard";
   userChoiceAddHTML(lizardImg);
 });
 spock.addEventListener("click", () => {
@@ -96,8 +96,6 @@ function rockScissorPaperLizardSpockEngine(userChoice) {
       battleButton.addEventListener("click", () => location.reload());
       return;
     }
-  } else {
-    gamesLeft.textContent--;
   }
 
   // Iterate from the matrix according to the random computer choice
@@ -112,9 +110,11 @@ function rockScissorPaperLizardSpockEngine(userChoice) {
   // Make the impact of the result
   if (result === 1) {
     wonGames.textContent++;
+    gamesLeft.textContent--;
     resultDiv.insertAdjacentText("beforeend", "You have won!");
   } else if (result === 0) {
     lostGames.textContent++;
+    gamesLeft.textContent--;
     resultDiv.insertAdjacentText("beforeend", "You have lost!");
   } else {
     resultDiv.insertAdjacentText("beforeend", "It's a draw.");
