@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-scissor-paper</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <i class="fa-solid fa-square-check" style="color: #5dc936"></i>
+        <p class="won"></p>
+        <i class="fa-solid fa-square-xmark" style="color: #f80d0d"></i>
+        <p class="lost"></p>
+        <i class="fa-solid fa-hashtag" style="color: #190a61"></i>
+        <p class="games"></p>
+      </header>
+      
+      <div class="button-container">
+        <button class="choose-btn" id="1"><i class="fa-solid fa-hand-back-fist"></i> Rock</button>
+        <button class="choose-btn" id="2"><i class="fa-solid fa-toilet-paper"></i> Paper</button>
+        <button class="choose-btn" id="3"><i class="fa-solid fa-scissors"></i> Scissor</button>
+        <button class="choose-btn" id="4"><i class="fa-solid fa-dragon"></i> Lizard</button>
+        <button class="choose-btn" id="5"><i class="fa-solid fa-hand-spock"></i>Spock</button>
+      </div>
+
+      <div class="arena" id="arena">
+        <div class="user-choice"></div>
+        <div class="vs">Vs</div>
+        <div class="computer-choice"></div>
+      </div>
+
+      <div class="result"></div>
+      <button class="battle-button">Battle</button>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
